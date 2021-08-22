@@ -11,4 +11,4 @@ def read_excel(File):
     sheet = workbook.active
     max_row = int(sheet.max_row) + 1
     for i in range(1, max_row):
-        merge_email.send_email(sheet, i)
+        merge_email.send_email(i)
