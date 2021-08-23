@@ -1,10 +1,14 @@
 import excel_reader
+import data
+import setData
 
 if __name__ == "__main__":
-    global Excel_file 
     success = True
-    while success == True: 
-        Excel_file = input("Enter path of Excel File:\n")
-        success = excel_reader.read_excel(f"{Excel_file}.xlsx")
+    while success == True:
+        email = input("Enter your email:")
+        password = input("Enter your password:") 
+        setData.setEmail(email, password)
+        data.Excel_name = input("Enter name of Excel File:\n")
+        success = excel_reader.read_excel(f"{data.Excel_name}.xlsx")
 
     
